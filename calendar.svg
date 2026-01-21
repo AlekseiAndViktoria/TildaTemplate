@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #F3F1F0; }
+      .title {
+        font-family: "Segoe Script", "Brush Script MT", "Comic Sans MS", cursive;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 36px;
+        fill: #6E6A67;
+      }
+      .dow {
+        font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+        font-weight: 650;
+        font-size: 16px;
+        fill: #7A7673;
+        opacity: 0.95;
+      }
+      .num {
+        font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+        font-weight: 750;
+        font-size: 22px;
+        fill: #6E6A67;
+        opacity: 0.92;
+      }
+      .num-strong { fill: #5C5957; }
+      .heart { fill: #AAA39E; opacity: 0.35; }
+    </style>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect class="bg" x="0" y="0" width="800" height="450" rx="28" ry="28"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="70" text-anchor="middle">Июнь 2026</text>
+
+  <!-- Layout -->
+  <!-- left=40, top=130, width=720, height=280 -->
+  <!-- 7 cols => colW=102.8571; 5 rows => rowH=56 -->
+  <!-- centers: x = 40 + colW*(c+0.5), y = 130 + rowH*(r+0.5) -->
+
+  <!-- Days of week -->
+  <g>
+    <text class="dow" x="91.4286"  y="115" text-anchor="middle">ПН</text>
+    <text class="dow" x="194.2857" y="115" text-anchor="middle">ВТ</text>
+    <text class="dow" x="297.1429" y="115" text-anchor="middle">СР</text>
+    <text class="dow" x="400.0000" y="115" text-anchor="middle">ЧТ</text>
+    <text class="dow" x="502.8571" y="115" text-anchor="middle">ПТ</text>
+    <text class="dow" x="605.7143" y="115" text-anchor="middle">СБ</text>
+    <text class="dow" x="708.5714" y="115" text-anchor="middle">ВС</text>
+  </g>
+
+  <!-- Heart behind 27: row 4 (r=3), col 6 (c=5); center x=605.7143, y=130+56*3.5=326 -->
+  <g transform="translate(605.7143,326)">
+    <path class="heart" transform="scale(1.25)"
+          d="M0,-14
+             C0,-26 16,-32 26,-22
+             C33,-15 33,-5 26,3
+             L0,26
+             L-26,3
+             C-33,-5 -33,-15 -26,-22
+             C-16,-32 0,-26 0,-14 Z"/>
+  </g>
+
+  <!-- Dates centered (June 2026 starts Monday, ends Tuesday) [web:6] -->
+  <g class="num" text-anchor="middle" dominant-baseline="middle">
+    <!-- Row 1: 1-7 -->
+    <text x="91.4286"  y="158">1</text>
+    <text x="194.2857" y="158">2</text>
+    <text x="297.1429" y="158">3</text>
+    <text x="400"      y="158">4</text>
+    <text x="502.8571" y="158">5</text>
+    <text x="605.7143" y="158">6</text>
+    <text x="708.5714" y="158">7</text>
+
+    <!-- Row 2: 8-14 -->
+    <text x="91.4286"  y="214">8</text>
+    <text x="194.2857" y="214">9</text>
+    <text x="297.1429" y="214">10</text>
+    <text x="400"      y="214">11</text>
+    <text x="502.8571" y="214">12</text>
+    <text x="605.7143" y="214">13</text>
+    <text x="708.5714" y="214">14</text>
+
+    <!-- Row 3: 15-21 -->
+    <text x="91.4286"  y="270">15</text>
+    <text x="194.2857" y="270">16</text>
+    <text x="297.1429" y="270">17</text>
+    <text x="400"      y="270">18</text>
+    <text x="502.8571" y="270">19</text>
+    <text x="605.7143" y="270">20</text>
+    <text x="708.5714" y="270">21</text>
+
+    <!-- Row 4: 22-28 -->
+    <text x="91.4286"  y="326">22</text>
+    <text x="194.2857" y="326">23</text>
+    <text x="297.1429" y="326">24</text>
+    <text x="400"      y="326">25</text>
+    <text x="502.8571" y="326">26</text>
+    <text x="605.7143" y="326" class="num-strong" font-weight="900">27</text>
+    <text x="708.5714" y="326">28</text>
+
+    <!-- Row 5: 29-30 -->
+    <text x="91.4286"  y="382">29</text>
+    <text x="194.2857" y="382">30</text>
+  </g>
+</svg>
